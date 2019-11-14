@@ -38,8 +38,6 @@
 #define LED_BLUE 0
 #define LED_GREEN 1
 
-#define GCP_TEST_SERVER_CERT_PATH "/certs/ser-cert.pem"
-
 static void halt_error(void);
 static void rtc_init_for_timers(void);
 
@@ -81,13 +79,12 @@ static void rtc_init_for_timers(void)
     if (ret != NRFX_SUCCESS)
         halt_error();
 
-    //disable all interrupts.
+    //disable all rtc interrupts.
     nrfx_rtc_int_disable(&rtc, &ret);
 
     nrfx_rtc_enable(&rtc);
 
-    //from this point RTC1 driver is no where used.
-    //only HAL counter register reads.
+    //from this point onwards only HAL counter register reads.
 }
 
 int main(void)

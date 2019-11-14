@@ -1,5 +1,5 @@
-#ifndef SRC_SHADOW_IOT_SHADOW_CONFIG_H_
-#define SRC_SHADOW_IOT_SHADOW_CONFIG_H_
+#ifndef AWS_IOT_CONFIG_H_
+#define AWS_IOT_CONFIG_H_
 
 // clang-format off
 
@@ -91,4 +91,4 @@
 
 // clang-format on
 
-#endif /* SRC_SHADOW_IOT_SHADOW_CONFIG_H_ */
+#endif /* AWS_IOT_CONFIG_H_ */

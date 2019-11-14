@@ -132,12 +132,11 @@ int gcp_iot_app(void)
 	Setting RootCA to NULL will skip server verification.
 	
 	For ECC keys + Google mqtt LTS server:
-		* SIM7600 SSL APIs fail in handshake stage when server verification is enabled. 
+		- SIM7600 SSL APIs fail in handshake stage when server verification is enabled. 
 		To try out set pRootCALocation to NULL.
 		
-		* MBEDTLS SSL APIs will need optimization level -O1 or higher else handshake will timeout due to slow key computation.
-		At -O0 JWT computation takes around 13 seconds.
-	*/
+		- MBEDTLS SSL APIs will need optimization level -O1 or higher else handshake will timeout due to slow key computation.
+    */
     mqttInitParams.pRootCALocation = GCP_IOT_ROOT_CA_FILENAME;
     mqttInitParams.pDeviceCertLocation = NULL;
     mqttInitParams.pDevicePrivateKeyLocation = NULL;
