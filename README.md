@@ -84,7 +84,9 @@ to your project.
 
 Certificates and any other arbitrary file types are stored in a simple read only file system as part of the code (const char array):  
 
-* Create directory *cloud-iot-with-nrf52/rofs_root* 
+* Create root directory to store files for read only file system:  
+    $ cd cloud-iot-with-nrf52  
+    $ mkdir rofs_root  
 * Copy all the certificates in PEM or CRT/DER format in this or its sub directory. Any number
 of files can be added, limited by flash size. File paths in source code begins from '/' character. Example, If a file named *aws-root-ca.pem* is copied to *cloud-iot-with-nrf52/rofs_root/certs* directory, in source code its path will be */certs/aws-root-ca.pem*
 * Generate the file system:  
